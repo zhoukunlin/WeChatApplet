@@ -1,0 +1,114 @@
+page {
+  height: 100%;
+  background-color: #fff;
+}
+
+/*文章模块 头*/
+.topic-cat{
+	height: 290rpx;/*分类与文章的间距*/
+	width: 100%;/*未知*/
+	padding: 30rpx;/*分类图片高度*/
+	white-space: nowrap;
+}
+.topic-cat .item{
+	width: 230rpx;/*分类图片 宽度*/
+	height: 230rpx;/*分类图片 高度*/
+	margin-right: 40rpx ;/*分类 间距*/
+	position: relative;
+	display: inline-block;
+}
+.topic-cat .item .thumb{
+	height: 100%;/*分类模块 高度比例*/
+	width: 100%;/*分类模块 宽度比例*/
+}
+.topic-cat .item .thumb .img{
+	height: 100%;/*分类图片 高度比例*/
+	width: 100%;/*分类图片 宽度比例*/
+	display: block;
+}
+.topic-cat .item .name{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 0rpx;/*分类标题高度*/
+	line-height: 0rpx;/*分类标题背景与文字的间距*/
+	width: 100%;
+	background: rgba(0,0,0,.85);
+	color: #fff;
+	z-index: 9;
+}
+
+.topic-contents {
+  width: 100%;
+  background-color: #fff;
+  padding-top: 10px;/*文章图上面的间距*/
+  border-top: 0px solid #f5f5f5;/*文章模块与分类的间距*/
+}
+
+.topic-content-list {
+  background-color: #fff;
+  position: relative;
+  width: 96%;/*文章图片大小,100%是正常比例*/
+  margin: 0 auto;
+  margin-bottom: 60px;/*文章模块间距*/
+}
+
+.content-images {
+  width: 100%;/*未知*/
+  display: block;
+}
+
+.content-bg {
+  width: 100%;/*未知比例*/
+  height: 100%;/*文章整体高度*/
+  position: absolute;
+  top: 0;
+  background-color: #000;
+  opacity: 0;/*覆盖文章模块黑色透明度,0为完全透明*/
+}
+
+.content-text {
+  position: absolute;/*位置 绝对:absolute 相对:Relative*/
+  font-size:5px;/*设置文字字号*/
+  top: 90%;/*文章模块 文字与上方距离*/
+  width: 110%;/*文章标题框宽度*/
+  text-align: start;/*文章标题对齐方式 center;居中  right ; left */
+  color: rgb(71, 71, 71);
+}
+
+.content-title {	
+  font-size: 40rpx;/*标题字号*/
+  padding-bottom: 5px;/*标题字间距*/
+  text-indent:0.8em;/*缩进*/
+}
+
+.content-subtitle {
+  font-size: 25rpx;/*副标题字号*/
+  padding-bottom: 5px;/*副标题字间距*/
+  text-indent:1.5em;/*缩进*/
+}
+
+.content-button {
+  border: 1px solid #fff;
+  width: 80px;/*未知尺寸*/
+  font-size: 24rpx;/*未知尺寸*/
+  margin: 0 auto;
+  border-radius: 20px;
+  padding: 4px 0;
+}
+
+.no-more-goods {
+  text-align: center;
+  margin-top: 20%;/*未知尺寸*/
+}
+
+.no-order-img {
+  width: 110px;/*未知尺寸*/
+  height: 110px;/*未知尺寸*/
+}
+
+.no-more-goods .text {
+  font-size: 28rpx;/*未知尺寸*/
+  color: #999;
+  margin-top: -5px;/*未知尺寸*/
+}

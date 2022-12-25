@@ -1,0 +1,93 @@
+page{
+    height: 100%;
+}
+.container{
+    background-color: #f5f5f9;
+    justify-content: initial;
+}
+.form-box{
+    width:100%;
+    background-color: #fff;
+    margin-top: 20rpx;
+}
+.row-wrap{
+    width: 720rpx;/*文本框宽度*/
+    height: 130rpx;/*文本间距*/
+    line-height: 88rpx;/*文本上间距*/
+    margin-left: 30rpx;/*文本左间距*/
+    border-bottom: 1rpx solid #eee;
+    display: flex;
+    font-size: 28rpx;/*字号*/
+    /*justify-content: space-between;*/
+}
+.row-wrap .label{
+    width: 160rpx;/*标题框宽度*/
+    color: rgb(22, 22, 22)
+}
+.row-wrap .label-right{
+    flex: 1;
+    height: 88rpx;
+    line-height: 88rpx;
+}
+.row-wrap .label-right input{
+    height: 100%;
+    font-size: 28rpx;/*副标题字号*/
+    padding-right: 30rpx;
+}
+.row-wrap .right-box{
+    margin-right: 30rpx; 
+}
+.arrow-right{
+    width: 15rpx;
+    height: 24rpx;
+}
+.save-btn,
+.cancel-btn{
+    width: 690rpx;/*按钮宽度*/
+    height: 80rpx;/*按钮高度*/
+    line-height: 80rpx;
+    text-align: center;
+    margin-top:30rpx; /*按钮间距*/
+    border-radius: 60rpx;/*圆角*/
+    box-sizing: border-box;
+}
+.save-btn{
+    background-color: #e64340;
+    color:#fff;
+}
+button[type="default"]{
+    background-color: #ffffff;
+    color:#000;
+}
+.addr-details{
+    height: auto;
+    padding: 30rpx 0;
+    margin-left:30rpx;
+    border-bottom: 1rpx solid #eee;
+    display: flex;
+    font-size: 28rpx;
+}
+.addr-details .label{
+    margin:auto 0 auto 0;
+    width: 160rpx;
+    color: #000
+}
+.addr-details textarea{
+    box-sizing: border-box;
+    width: 480rpx;
+    overflow: scroll;
+}
+picker {
+    min-width: 20rpx;
+    height: 100%;
+    margin-right: 20rpx;
+}
+.hui{
+    color: #777;
+}
+.showRegionSelect {
+  margin-left: 0rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

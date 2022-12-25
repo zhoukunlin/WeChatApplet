@@ -1,0 +1,77 @@
+{
+    "setting": {},
+    "condition": {
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "我的砍价",
+                    "pathName": "pages/my-kanjia/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "我的拼团",
+                    "pathName": "pages/my-pintuan/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "专栏",
+                    "pathName": "pages/topic-list/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "新人领券",
+                    "pathName": "pages/freshman/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "home",
+                    "pathName": "pages/index/index",
+                    "query": "inviter_id=1210945",
+                    "scene": 1011
+                },
+                {
+                    "name": "商品详情页面",
+                    "pathName": "pages/goods-details/index",
+                    "query": "id=115291&inviter_id=456",
+                    "scene": 1011
+                },
+                {
+                    "name": "商品详情页面",
+                    "pathName": "pages/goods-details/index",
+                    "query": "id=266924",
+                    "scene": null
+                },
+                {
+                    "name": "砍价详情页面",
+                    "pathName": "pages/goods-details/index",
+                    "query": "id=115288",
+                    "scene": null
+                },
+                {
+                    "name": "砍价详情页面2",
+                    "pathName": "pages/goods-details/index",
+                    "query": "id=115288&kjJoinUid=1210945",
+                    "scene": null
+                },
+                {
+                    "name": "拼团",
+                    "pathName": "pages/goods-details/index",
+                    "query": "id=6761",
+                    "scene": null
+                },
+                {
+                    "name": "单独编译",
+                    "pathName": "pages/goods-details/index",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                }
+            ]
+        }
+    },
+    "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html"
+}

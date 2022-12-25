@@ -1,0 +1,8 @@
+{
+	"enablePullDownRefresh": true,
+	"navigationBarTitleText": "专栏",
+	"navigationStyle": "custom",
+	"usingComponents": {
+		"navigation": "/components/navigation/navigation"
+	}
+}

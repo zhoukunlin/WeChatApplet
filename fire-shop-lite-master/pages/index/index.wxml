@@ -1,0 +1,156 @@
+<!--导航,禁用搜索跳转-->
+<navigation id='Navigation' show-search='{{true}}' disable-search-jump="{{disableSearchJump}}" class="fix-top" animation="{{fadeAni}}"></navigation>
+<!--轮播海报-->
+<view class="swiper-container">
+	<swiper class="screen-swiper {{dotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true"
+	 interval="5000" duration="500">
+		<swiper-item wx:for="{{banners}}" wx:key="id" bindtap="tapBanner" data-url="{{item.linkUrl}}">
+			<image src="{{item.picUrl}}" mode="widthFix"></image>
+		</swiper-item>
+	</swiper>
+</view>
+<!--分类模块-->
+<view class="index-menu-bg padding bg-white">
+	<!--小分类
+	<view class="index-menu flex">
+		<view class="menu-list" wx:for="{{navigation}}" wx:key="id" bindtap="tapNav" data-url="{{item.linkUrl}}">
+			<image src="{{item.picUrl}}" />
+			<view class="text">{{item.title}}</view>
+		</view>
+	</view>
+	-->
+	<!--大分类
+	<navigator wx:if="{{aliveRooms.length> 0}}" url="plugin-private://wx2b03c6e691cd7370/pages/live-player-plugin?room_id={{aliveRooms[0].roomid}}" class="live-ad padding-tb">
+		<image src="../../images/live_ad.png"></image>
+	</navigator>
+	<view class="index-hot flex flex-wrap justify-between">
+		<block wx:for="{{hot}}" wx:key="hot">
+			<navigator hover-class="none" class="hot-item" url="{{item.linkUrl}}">
+				<image src="{{item.picUrl}}"></image>
+			</navigator>
+		</block>
+	</view>
+	-->
+</view>
+
+<!--文章模块 头-->
+<view class="page">
+	<!--分类图片-->
+	<scroll-view class="topic-cat" scroll-x="true">
+		<view class="margin-right item text-center" wx:for="{{topics}}" wx:key="id" bindtap="tapTopic" data-id="{{item.id}}" style='background:rgba(0,0,0,0); margin-top:-10rpx'>
+			<view class="thumb">
+				<image class="img" src="{{item.icon}}" mode="scaleToFill"></image>
+			</view>
+			<view class="name text-center text-cut">{{item.name}}</view>
+		</view>
+	</scroll-view>
+	
+	<view class="topic-contents">
+		<view class="topic-content-list" wx:for="{{contents}}" wx:key="id" bindtap="tapContents" data-id="{{item.id}}" style='background:rgba(0,0,0,0); margin-top:-10rpx'>
+			<image class="content-images" mode="widthFix" src="{{item.pic}}"></image>
+			<view class="content-bg"></view>
+			<view class="content-text">
+				<!-- 文章标题-->
+				<view class="content-title" >{{item.title}}</view>
+				<view class="content-subtitle">{{item.descript}}</view>
+				<!--
+				<view class="content-button">查看详情</view>
+				-->
+			</view>
+		</view>
+		
+		<view hidden="{{contents.length > 0 ? true : false}}" class="no-more-goods">
+			<image src="/images/empty_comment.png" class="no-order-img"></image>
+			<view class="text">还没有相关话题呢</view>
+		</view>
+	</view>
+
+</view>
+<!--文章模块 尾-->
+
+<!--拼团模块
+<view class="pingtuan" wx:if="{{pingtuanList.length > 0}}">
+	<view class="goods-title bg-cyan light">
+		<view class="line"></view>
+		<view class="text">正在拼团</view>
+		<view class="line"></view>
+	</view>
+	<scroll-view scroll-x="true" class="scroll" enable-flex="true">
+		<navigator hover-class="none" url="/pages/goods-details/index?id={{item.id}}" class="scroll-item shadow shadow-lg bg-white margin-left margin-top" wx:for="{{pingtuanList}}" wx:key="id">
+			<view class="thumb">
+				<image src="{{item.pic}}" mode="aspectFill"></image>
+			</view>
+			<view class="text padding-sm">
+				<view class="title text-cut text-black">{{item.name}}</view>
+				<view class="desc text-cut text-gray text-sm" style="height: 50rpx;">{{item.characteristic}}</view>
+				<view class="flex">
+					<view class="flex-sub flex justify-start">
+						<view>
+							<text class="rmb text-black">¥</text><text class="text-xl text-red">{{item.pingtuanPrice}}</text>
+						</view>
+						<view class="margin-left">
+							<text class="rmb">¥</text><text style="text-decoration: line-through;">{{item.minPrice}}</text>
+						</view>
+					</view>
+					<view class="flex-sub flex justify-end">
+						<button class="cu-btn round bg-red sm tex-xs">去拼团</button>
+					</view>
+				</view>
+			</view>
+		</navigator>
+	</scroll-view>
+</view>
+-->
+<!--砍价模块
+<view class="pingtuan" wx:if="{{kanjiaList.length > 0}}">
+	<view class="goods-title bg-yellow light">
+		<view class="line"></view>
+		<view class="text">正在砍价</view>
+		<view class="line"></view>
+	</view>
+	<scroll-view scroll-x="true" class="scroll" enable-flex="true">
+		<navigator hover-class="none" url="/pages/goods-details/index?id={{item.id}}" class="scroll-item shadow shadow-lg bg-white margin-left margin-top" wx:for="{{kanjiaList}}" wx:key="id">
+			<view class="thumb">
+				<image src="{{item.pic}}" mode="aspectFill"></image>
+			</view>
+			<view class="text padding-sm">
+				<view class="title text-cut text-black">{{item.name}}</view>
+				<view class="desc text-cut text-gray text-sm" style="height: 50rpx;">{{item.characteristic}}</view>
+				<view class="flex">
+					<view class="flex-sub flex justify-start">
+						<view>
+							<text class="rmb text-black">¥</text><text class="text-xl text-red">{{item.kanjiaPrice}}</text>
+						</view>
+						<view class="margin-left">
+							<text class="rmb">¥</text><text style="text-decoration: line-through;">{{item.minPrice}}</text>
+						</view>
+					</view>
+					<view class="flex-sub flex justify-end">
+						<button class="cu-btn round bg-red sm tex-xs">去砍价</button>
+					</view>
+				</view>
+			</view>
+		</navigator>
+	</scroll-view>
+</view>
+-->
+<!--人气推荐,和产品展示
+<view wx:if="{{goodsRecommend.length > 0}}" class="goods-container">
+	<view class="goods-title bg-olive light" style="margin-bottom: 30rpx;">
+		<view class="line"></view>
+		<view class="text">{{recommendGoodsTitle}}</view>
+		<view class="line"></view>
+	</view>
+	<view class="goods-list flex justify-between padding-top padding-lr flex-wrap" >
+		<navigator url="/pages/goods-details/index?id={{item.id}}" class="list-item" wx:for="{{goodsRecommend}}" wx:key="id">
+			<image src="{{item.pic}}" mode="aspectFill"></image>
+			<view class="goods-list-title">{{item.name}}</view>
+			<view class="goods-list-text">{{item.characteristic}}</view>
+			<view class="goods-list-money">Ұ{{item.minPrice}}</view>
+		</navigator>
+	</view>
+</view>
+-->
+<!--更多隐藏
+<view class="cu-load bg-gray {{loadingMoreHidden?'loading':'over'}}"></view>
+-->

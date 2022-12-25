@@ -1,0 +1,238 @@
+page {
+  background-color: #eee;
+}
+
+.container {
+  height: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  overflow-y: hidden;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.userinfo {
+  background: #fff;
+  width: 100%;
+  height: 600rpx;/*个人头像 背景高度*/
+  text-align: center;
+  position: relative;
+}
+.userinfo-inner{
+	position: relative;
+	z-index: 1;
+}
+/*背景图片设置*/
+.userinfo image{
+	position: absolute;
+	top: 0;/*背景图与顶部间距*/
+	left: 0;/*背景图片与左边间距*/
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+}
+/**/
+.userinfo button {
+  position: absolute;
+  width: 100%;
+  height: 300rpx;
+  top: 0;
+  opacity: 0;
+}
+
+.userinfo-avatar {
+  border-radius: 100%;/*头像图标圆角*/
+  margin-top: 200rpx;/*头像与顶部间距*/
+  display: inline-block;
+  overflow: hidden;
+  width: 200rpx;/*头像宽度*/
+  height: 200rpx;/*头像高度*/
+}
+
+.iser-info-box {
+  height: 100rpx;
+	text-align: center;
+	display: block;
+}
+
+.userinfo-nickname {
+  color: #fff;
+  font-size: 32rpx;
+	text-align: center;
+	margin-bottom: 10rpx;
+	display: block;
+}
+/**/
+.userinfo-score {
+  font-size: 24rpx;
+  margin-top: 5px;
+  background-color: #b3a078;
+  color: #fff;
+  padding: 1px 5px;
+  border-radius: 2px;
+  position: relative;
+  z-index: 1;
+}
+
+.userinfo-score-day {
+  font-size: 24rpx;/*今日签到字体大小*/
+  margin-top: 5px;/*字间距*/
+  color: rgb(187, 187, 187);
+}
+
+.userinfo-item {
+  width: 100%;/*我的订单宽度比例*/
+  border-bottom: 0px solid #fbfbfb;
+  line-height: 100rpx;
+  padding-left: 30px;/*左间距*/
+  background-color: #fff;
+  font-size: 200rpx;/*与顶部间距*/
+  color: #333;
+}
+
+.userinfo-item>image {
+  width: 20px;/*我的订单icon宽度*/
+  height: 20px;/*我的订单icon高度*/
+  margin: 0 5px -4px 0;
+}
+
+.userinfo-item navigator {
+  display: inline-block;
+  width: 90%;
+  font-size: 40rpx;/*我的订单字号*/
+}
+.userinfo-item navigator image{
+	height: 36rpx;/*我的订单 > 高度*/
+	width: 20rpx;/*我的订单 > 宽度*/
+	float: right;
+	margin: 32rpx 10rpx 0 0;/*与顶部间距*/
+}
+
+
+.userinfo-item navigator text {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.userinfo-item-box {
+  width: 10%;
+}
+
+.userinfo-item-box .userinfo-item {
+  display: inline-block;
+  width: 33.1%;
+  text-align: center;
+  height: 200rpx;
+  padding-left: 0;
+  line-height: 400rpx;
+  position: relative;
+}
+
+.userinfo-item-box .userinfo-item:nth-child(1) {
+  border-right: 0px solid #fbfbfb;
+}
+
+.userinfo-item-box .userinfo-item:nth-child(2) {
+  border-right: 0px solid #fbfbfb;
+}
+
+.userinfo-item-box .userinfo-item:nth-child(4) {
+  border-right: 0px solid #fbfbfb;
+}
+
+.userinfo-item-box .userinfo-item:nth-child(5) {
+  border-right: 0px solid #fbfbfb;
+}
+
+.userinfo-item-box .userinfo-item image {
+  width: 50rpx;
+  height: 50rpx;
+  display: block;
+  margin: 0 auto;
+  margin-top: 40rpx;
+  margin-bottom: 12rpx;
+}
+
+.userinfo-item-box .userinfo-item text {
+  position: absolute;
+  bottom: 200rpx;
+  width: 100%;
+  left: 0;
+  color: #999;
+  font-size: 22rpx;
+}
+
+.userinfo-item-box .userinfo-item navigator {
+  font-size: 260rpx;
+  color: #333;
+  margin-top: 50rpx;
+}
+.c01{
+  margin: 10px;
+  padding: 10px;
+  background-color:  gainsboro;
+  border-radius: 10px;
+  margin-top: 40rpx;/*头像与顶部间距*/
+}
+
+.userinfo-item-box .userinfo-item button {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.userinfo-info {
+  font-size: 26rpx;
+  color: #999;
+  margin-top: 30rpx;
+}
+
+/* notice */
+
+.userinfo-notice {
+  display: flex;
+  background-color: #fff;
+  align-items: center;
+  width:100%;
+  height: 80rpx;
+  margin-bottom: 20rpx;
+}
+
+.userinfo-notice image {
+  width: 36rpx;
+  height: 36rpx;
+  padding-left: 30rpx;
+  padding-right: 20rpx;
+}
+
+.userinfo-notice .notice_swiper {
+  height: 80rpx;
+  width: 85%;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  color: #ab2b2b;
+}
+.login-btn{
+  color: rgb(35, 29, 28);
+  margin-top: 40rpx;/*头像与顶部间距*/
+}
+.cu-item .contact{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 9;
+	background: none;
+	border: none;
+}
+.cu-item .contact:after{
+	border: none;
+}

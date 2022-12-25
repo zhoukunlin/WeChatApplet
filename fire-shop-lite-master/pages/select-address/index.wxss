@@ -1,0 +1,84 @@
+.container {
+  background-color: #f2f2f2;
+}
+
+.address-list {
+  width: 100%;
+  background-color: #fff;
+  margin-top: 150rpx;
+  padding-bottom: 0rpx;
+}
+
+.address-list .a-address {
+  width: 720rpx;
+  margin-left: 30rpx;/*地址文字 左间距*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 70rpx 0;/*地址之间 间距*/
+  border-bottom: 1rpx solid #eee;/*分隔线*/
+  /*圆角属性*/
+  margin: 10px;
+  padding: 23px;
+  border-radius: 10px;
+}
+
+.a-address .left-text {
+  width: 610rpx;
+  box-sizing: border-box;
+}
+
+.a-address .left-text .name-tel {
+  margin-bottom: 20rpx;/*地址文字间距*/
+}
+
+.a-address .left-text .address-box {
+  font-size: 24rpx;/*详细地址字号*/
+  color: #888;
+  line-height: 36rpx;/*与名字间距*/
+}
+
+.a-address .right-edit {
+  width: 72rpx;/*修改地址 图标 右间距*/
+}
+.a-address .right-edit image {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.bottom-box {
+  position: fixed;
+  width: 95vw;/*新增地址整体 宽度*/
+  bottom: 10;/*置于顶部*/
+  font-size: 30rpx;
+  color: #333;
+  border-top: 10rpx solid #eee;
+  height: 100rpx;
+  line-height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /*圆角属性*/
+  margin: 10px;
+  padding: 10px;
+  background-color:  rgb(255, 255, 255);
+  border-radius: 40px;
+}
+.bottom-box .next {
+  margin-right: 10rpx;/*新增地址 右图标 右间距*/
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.bottom-box .add-btn {
+  display: flex;
+  align-items: center;
+  margin-left: 10rpx;/*新增地址 左间距*/
+}
+.bottom-box .add-btn image {
+  width: 40rpx;
+  height: 40rpx;
+}
+.bottom-box .add-btn view {
+  margin-left: 16rpx;/*新增地址与左图标间距*/
+}
